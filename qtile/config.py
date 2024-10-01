@@ -405,6 +405,8 @@ secondary_widgets = [
         font="UbuntuMono Nerd Font Mono Bold",
         fontsize=13,
         empty_group_string="Desktop",
+        scroll_fixed_width = 1000,
+        scroll = True,
         max_chars=130,
         foreground="#ffb86c",
     ),
@@ -436,9 +438,9 @@ secondary_widgets = [
 
 # Bar definition
 def status_bar(widgets):
-    return bar.Bar(widgets, 20, margin=[15, 20, 6, 20], opacity=0.92)
-
-
+    return bar.Bar(widgets, 20, margin=[15, 20, 0, 20], opacity=0.92)
+def secondary_status_bar(widgets):
+    return bar.Bar(widgets, 20, margin=[15, 460, 0, 460], opacity=0.72)
 # SCREENS
 
 screens = [Screen(top=status_bar(primary_widgets))]
@@ -461,7 +463,7 @@ else:
 
 if connected_monitors > 1:
     for _ in range(1, connected_monitors):
-        screens.append(Screen(top=status_bar(secondary_widgets)))
+        screens.append(Screen(top=secondary_status_bar(secondary_widgets)))
 
 
 # Drag floating layouts.
