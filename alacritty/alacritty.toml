@@ -9,9 +9,12 @@
 
 [font]
 size = 13
-
 normal = {family = "UbuntuMono Nerd Font Mono"}
 
+[cursor]
+
+style = {shape = "Beam", blinking ="Always"}
+thickness = 0.15
 
 [colors.primary]
 
