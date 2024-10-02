@@ -1,0 +1,5 @@
+[Default Applications]
+application/x-shellscript=code.desktop
+
+[Added Associations]
+application/x-shellscript=code.desktop;
