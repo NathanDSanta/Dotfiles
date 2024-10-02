@@ -49,9 +49,9 @@ format = '[ $symbol $branch(:$remote_branch) ]($style)'
 
 [git_status]
 style = "fg:#50fa7b "
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
+ahead = "⇡ ${count}"
+diverged = "⇕⇡ ${ahead_count}⇣${behind_count}"
+behind = "⇣ ${count}"
 deleted = "✘"
 modified = "󰷈"
 up_to_date = ""
@@ -213,4 +213,4 @@ format = '[](fg:#333a56 $style)[  $time ](fg:#94e2d5 $style)'
 # fg:#3b4363 if time enabled
 [character]
 success_symbol = "[](fg:#f1fa8c)"
-error_symbol = "[](fg:#ff5555)"
+error_symbol = "[](fg:#ff5555)"
