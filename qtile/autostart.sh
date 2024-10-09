@@ -1,3 +1,4 @@
+#!/bin/bash
 
 setxkbmap es &
 
@@ -8,5 +9,7 @@ nitrogen --restore &
 picom --daemon --experimental-backends &
 
 pulseaudio --start &
+
+nm-applet &
 
 pamixer -m &

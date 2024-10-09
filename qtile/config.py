@@ -72,13 +72,14 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "shift"], "r", lazy.spawn("nitrogen --restore"), desc="Restore nitrogen wallpaper"),
     Key([mod], "r", lazy.spawn("sh -c ~/.config/rofi/scripts/launcher"), desc="Spawn a command using a prompt widget"),
     Key([mod], "q", lazy.spawn("sh -c ~/.config/rofi/scripts/power"), desc="powermenu"),
     Key([mod], "d", lazy.spawn("sh -c ~/.config/rofi/scripts/display_switcher"), desc="Display-mode switcher"),
 
     # C U S T O M
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume 3 +5%"), desc="Volume Up"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume 3 -5%"), desc="volume down"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5"), desc="Volume Up"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5"), desc="volume down"),
     Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute"), desc="Volume Mute"),
     Key([mod], "p", lazy.spawn("playerctl play-pause"), desc="playerctl"),
     Key([mod, "shift"], "p", lazy.spawn("playerctl previous"), desc="playerctl"),
